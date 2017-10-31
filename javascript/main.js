@@ -1,6 +1,7 @@
 var myGame
 var img
 var ctx
+var audio
 $(document).ready(function() {
   ctx = document.getElementById('canvas').getContext("2d")
   myGame = new Game();
@@ -23,8 +24,9 @@ $(document).ready(function() {
     if (e.keyCode == 83) {
       // myGame.pointer.shoot();
       myGame.counter.addPoints();
-      
+
     }
   }
-
+  audio = new Audio ("./images/Ghostbusters-.mp3")
+  audio.onload(audio.play());
 });

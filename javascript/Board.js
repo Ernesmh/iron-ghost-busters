@@ -8,11 +8,6 @@ function Board(){
 
 Board.prototype.start = function (){
 
-  //this.canvas.x=300;
-  //this.canvas.y=300;
-
-  // document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-
 }
         //Generamos un setInterval para actualizar en todo momento el juego
   // this.interval = setInterval(updateGameArea, 20);
