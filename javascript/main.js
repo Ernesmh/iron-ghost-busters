@@ -23,7 +23,7 @@ $(document).ready(function() {
     if (e.keyCode == 83) {
       // myGame.pointer.shoot();
       myGame.counter.addPoints();
-      console.log("holaaa sss")
+      
     }
   }
 

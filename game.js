@@ -4,7 +4,7 @@ function Game() {
   this.ghost = new Ghost()
   this.gun = new Gun()
   this.counter = new Counter();
-  // this.chrono = new Chrono();
+  this.chrono = new Chrono();
 }
 
 Game.prototype.startGame = function() {
@@ -19,7 +19,8 @@ Game.prototype.update = function() {
   this.ghost.drawAnimation()
   this.pointer.drawPointer()
   this.gun.drawGun();
-  // this.chrono.drawChrono();
+  this.chrono.drawChrono();
+  this.counter.drawCounter();
 }
 
 Game.prototype.goCounter = function() {

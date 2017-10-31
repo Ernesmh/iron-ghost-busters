@@ -14,7 +14,7 @@ Ghost.prototype.drawAnimation = function() {
   img.src = "images/ghost-512.png";
   ctx.drawImage(img, this.x + this.dx, this.y + this.dy, 150, 150);
 
-  if (this.x > 1200 || this.x < 100) {
+  if (this.x > 1100 || this.x < 200) {
     this.dx = -this.dx;
   }
   if (this.y > 500 || this.y < 10) {
