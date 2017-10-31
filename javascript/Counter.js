@@ -3,7 +3,7 @@ function Counter(){
   this.width = 210;
   this.x = 1250;
   this.y = 25;
-  this.sum = 0;
+  this.sum = 00;
 }
 
 Counter.prototype.addPoints = function(){
@@ -13,6 +13,8 @@ Counter.prototype.addPoints = function(){
   myGame.pointer.y <= myGame.ghost.y + myGame.ghost.height)){
     this.sum += 1;
     console.log("hit!")
+    audiohit = new Audio ("./images/touche.mp3")
+    audiohit.onload(audiohit.play());
     console.log(this.sum)
   }
 }
@@ -22,8 +24,8 @@ Counter.prototype.drawCounter = function(){
   imgco.src = "images/contador.png";
   ctx.drawImage(imgco, this.x, this.y, this.height, this.width);
 
-  ctx.font = "60px Arial";
-ctx.fillText(this.sum,1338,220)
+  ctx.font = "50px Arial";
+ctx.fillText(this.sum,1328,210)
 
 ctx.font = "35px Arial";
 ctx.fillText("HITS",1315,165)
