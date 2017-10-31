@@ -1,64 +1,30 @@
-var myBoard
-var myPointer
+var myGame
+var img
+var ctx
 $(document).ready(function() {
-  myPointer = new Pointer();
-  myBoard = new Board();
+  ctx = document.getElementById('canvas').getContext("2d")
+  myGame = new Game();
 
-  myBoard.start();
-
-  myBoard.context.fillStyle = "rgb(255,255,255)";
-  myBoard.context.fillRect(300, 75, 1600, 1000);
-
-  myBoard.context.fillStyle = "rgb(0,0,0)";
-  myBoard.context.strokeRect(300, 75, 1600, 1000);
-
-  // var img = new Image();
-  //   img.onload = function() {
-  //     myBoard.context.drawImage(img, 300, 75, 1600, 900);
-  //   };
-  //   img.src = "images/fondo.jpg";
-
+  myGame.startGame();
 
   document.onkeydown = function(e) {
     if (e.keyCode == 37) {
-      myPointer.moveLeft();
+      myGame.pointer.moveLeft();
     }
     if (e.keyCode == 39) {
-      myPointer.moveRight();
+      myGame.pointer.moveRight();
     }
     if (e.keyCode == 38) {
-      myPointer.moveUp();
+      myGame.pointer.moveUp();
     }
     if (e.keyCode == 40) {
-      myPointer.moveDown();
+      myGame.pointer.moveDown();
     }
     if (e.keyCode == 83) {
-      myPointer.shoot();
+      // myGame.pointer.shoot();
+      myGame.counter.addPoints();
+      console.log("holaaa sss")
     }
   }
 
 });
-
-function updateCanvas() {
-  myBoard.context.clearRect(0, 0, 1500, 1700);
-  drawPointer()
-}
-
-function drawPointer() {
-  myBoard.context.beginPath();
-  myBoard.context.arc(myPointer.x, myPointer.y, myPointer.width / 2, 0, Math.PI * 2, false);
-  myBoard.context.strokeStyle = "red";
-  myBoard.context.stroke();
-
-  myBoard.context.beginPath();
-  myBoard.context.moveTo(myPointer.x, myPointer.y-30);
-  myBoard.context.lineTo(myPointer.x, myPointer.y+30);
-  myBoard.context.strokeStyle = "red";
-  myBoard.context.stroke();
-
-
-  myBoard.context.moveTo(myPointer.x-30, myPointer.y);
-  myBoard.context.lineTo(myPointer.x+30, myPointer.y);
-  myBoard.context.strokeStyle = "red";
-  myBoard.context.stroke();
-}

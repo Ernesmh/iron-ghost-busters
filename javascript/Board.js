@@ -1,18 +1,18 @@
 function Board(){
-  this.canvas = document.createElement("canvas");
-  this.frames= 0;
-
+  this.height= 1500;
+  this.frames= 900;
+  this.x = 300;
+  this.y = 100;
 }
 
 
 Board.prototype.start = function (){
-  this.canvas.width = 1500;
-  this.canvas.height = 800;
+
   //this.canvas.x=300;
   //this.canvas.y=300;
-  this.context = this.canvas.getContext("2d");
-  document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-  this.interval = setInterval(updateCanvas, 20);
+
+  // document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+
 }
         //Generamos un setInterval para actualizar en todo momento el juego
   // this.interval = setInterval(updateGameArea, 20);
