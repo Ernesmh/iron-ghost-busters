@@ -3,7 +3,7 @@ function Counter(){
   this.width = 210;
   this.x = 1250;
   this.y = 25;
-  this.sum = 00;
+  this.sum = 0;
 }
 
 Counter.prototype.addPoints = function(){
@@ -14,7 +14,7 @@ Counter.prototype.addPoints = function(){
     audiohit = new Audio ("./images/touche.mp3")
     audiohit.play();
     this.sum += 1;
-    
+("0" + this.sum).slice(-2)
 
     console.log(this.sum)
   }
@@ -26,7 +26,7 @@ Counter.prototype.drawCounter = function(){
   ctx.drawImage(imgco, this.x, this.y, this.height, this.width);
 
   ctx.font = "50px Arial";
-ctx.fillText(this.sum,1328,210)
+ctx.fillText(("0" + this.sum).slice(-2),1326,210)
 
 ctx.font = "35px Arial";
 ctx.fillText("HITS",1315,165)

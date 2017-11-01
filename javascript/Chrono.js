@@ -12,7 +12,7 @@ Chrono.prototype.startChrono = function(){
   var counter = 59;
   var timer = function () {
     console.log(counter);
-    a = counter;
+    a = ("0" + counter).slice(-2);
     timeoutId = setTimeout(timer, 1000);
     counter -= 1;
 
@@ -25,8 +25,10 @@ Chrono.prototype.startChrono = function(){
   var timeoutId = setTimeout(timer, 1000);
 }
 
-Chrono.prototype.stopChrono = function(){
-
+Chrono.prototype.stop = function(){
+  if(a === 0){
+    console.log("eh")
+  }
 }
 
 Chrono.prototype.drawChrono = function(){

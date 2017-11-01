@@ -24,12 +24,8 @@ Ghost.prototype.drawAnimation = function() {
   }
   this.x += this.dx
   this.y += this.dy
-
 }
 
-Ghost.prototype.appear = function() {
-
-}
 
 Ghost.prototype.diedGhost = function() {
   if ((myGame.pointer.x >= myGame.ghost.x &&
@@ -41,10 +37,6 @@ Ghost.prototype.diedGhost = function() {
     console.log(this.number);
     return true
   } else return false
-}
-
-Ghost.prototype.burn = function() {
-
 }
 
 Ghost.prototype.dissapear = function() {

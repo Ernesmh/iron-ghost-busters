@@ -16,12 +16,12 @@ Game.prototype.startGame = function() {
 
 Game.prototype.update = function() {
   ctx.clearRect(0, 0, 1500, 800);
-
+  this.ghost.drawAnimation()
   this.pointer.drawPointer()
   this.gun.drawGun();
   this.chrono.drawChrono();
   this.counter.drawCounter();
-  this.ghost.drawAnimation()
+
 
 }
 
@@ -29,7 +29,8 @@ Game.prototype.newGhost = function() {
   this.ghost = new Ghost()
 }
 
-Game.prototype.reset = function() {
+Game.prototype.finish = function() {
+
 
 }
 

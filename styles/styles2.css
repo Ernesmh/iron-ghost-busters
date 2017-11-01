@@ -1,0 +1,53 @@
+body{
+  width:100%;
+  margin: 0;
+  background-image: url("../images/halloween.jpg");
+  background-size: cover;
+}
+
+#intro{
+  height: 800px;
+  width: 1500px;
+  position:relative;
+  left: 200px;
+  top: 20px;
+  background-image: url("../images/fondo.jpg");
+  background-size: cover;
+  margin-top: 80px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.play{
+  position:absolute;
+  top: 590px;
+  left: 1000px;
+  width: 400px;
+  height: auto;
+  cursor: pointer;
+}
+
+.logo{
+  position: absolute;
+  width: 900px;
+  height:auto;
+  margin-top:0;
+  top:70px;
+  left: 20px;
+}
+
+.keys{
+  position:absolute;
+  top: 340px;
+  left: 1050px;
+  width: 300px;
+  height:auto;
+}
+
+.s-key{
+    position:absolute;
+    top: 150px;
+    left: 1070px;
+    width: 250px;
+    height:auto;
+}
