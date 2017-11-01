@@ -21,6 +21,7 @@ Game.prototype.update = function() {
   this.gun.drawGun();
   this.chrono.drawChrono();
   this.counter.drawCounter();
+  
 }
 
 Game.prototype.goCounter = function() {

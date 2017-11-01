@@ -3,11 +3,23 @@ function Chrono(){
   this.width = 220;
   this.x = 20;
   this.y = 20;
-  this.time = 60;
+  this.time = this.startChrono();
 }
 
 Chrono.prototype.startChrono = function(){
 
+  var counter = 60;
+  var timer = function () {
+    console.log(counter);
+    timeoutId = setTimeout(timer, 1000);
+    counter -= 1;
+return counter;
+    if (counter <0 ) {
+      clearTimeout(timeoutId);
+    }
+  }
+
+  var timeoutId = setTimeout(timer, 1000);
 }
 
 Chrono.prototype.stopChrono = function(){
@@ -22,14 +34,3 @@ Chrono.prototype.drawChrono = function(){
   ctx.font = "60px Arial";
 ctx.fillText(this.time,this.x + 77, this.y + 155)
 }
-
-
-  var i = 60;
-var interval = setInterval(function () {
-  console.log(i);
-  i--;
-
-  if (i < 0) {
-    clearInterval(interval);
-  }
-}, 1000);

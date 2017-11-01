@@ -24,9 +24,10 @@ $(document).ready(function() {
     if (e.keyCode == 83) {
       // myGame.pointer.shoot();
       myGame.counter.addPoints();
+      myGame.ghost.diedGhost();
 
     }
   }
   audio = new Audio ("./images/Ghostbusters-.mp3")
-  audio.onload(audio.play());
+  audio.play();
 });
