@@ -16,21 +16,17 @@ Game.prototype.startGame = function() {
 
 Game.prototype.update = function() {
   ctx.clearRect(0, 0, 1500, 800);
-  this.ghost.drawAnimation()
+
   this.pointer.drawPointer()
   this.gun.drawGun();
   this.chrono.drawChrono();
   this.counter.drawCounter();
-  
+  this.ghost.drawAnimation()
+
 }
 
-Game.prototype.goCounter = function() {
-  // if ((myGame.pointer.x >= myGame.ghost.x &&
-  // myGame.pointer.x <= myGame.ghost.x + myGame.ghost.width)
-  // && (myGame.pointer.y >= myGame.ghost.y &&
-  //myGame.pointer.y <= myGame.ghost.y + myGame.ghost.height)){
-  //   this.counter += 1;
-  // }
+Game.prototype.newGhost = function() {
+  this.ghost = new Ghost()
 }
 
 Game.prototype.reset = function() {

@@ -3,8 +3,8 @@ function Ghost() {
   this.width = 150;
   this.x = Math.random() * 800 + 200;
   this.y = Math.random() * 500;
-  this.number = [];
-  this.pics = ['images/ghost-512.png','images/ghostdead.png','images/ghostpink.png','images/ghostpinkdead.png'];
+  this.number = ["ghost"];
+  this.pics = ['images/ghost-512.png', 'images/ghostdead.png', 'images/ghostpink.png', 'images/ghostpinkdead.png'];
   this.dx = (Math.random() - 0.5) * 50 + 10
   this.dy = (Math.random() - 0.5) * 50 + 10
   this.img = new Image();
@@ -33,16 +33,14 @@ Ghost.prototype.appear = function() {
 
 Ghost.prototype.diedGhost = function() {
   if ((myGame.pointer.x >= myGame.ghost.x &&
-  myGame.pointer.x <= myGame.ghost.x + myGame.ghost.width)
-  && (myGame.pointer.y >= myGame.ghost.y &&
-  myGame.pointer.y <= myGame.ghost.y + myGame.ghost.height)){
-  this.img.src = this.pics[1];
-  this.number.push("ghost");
-  console.log(this.number);
-
-  this.drawAnimation();
-}
-
+      myGame.pointer.x <= myGame.ghost.x + myGame.ghost.width) &&
+    (myGame.pointer.y >= myGame.ghost.y &&
+      myGame.pointer.y <= myGame.ghost.y + myGame.ghost.height)) {
+    this.img.src = this.pics[1];
+    this.number.pop();
+    console.log(this.number);
+    return true
+  } else return false
 }
 
 Ghost.prototype.burn = function() {

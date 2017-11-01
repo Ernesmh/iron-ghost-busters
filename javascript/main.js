@@ -24,8 +24,9 @@ $(document).ready(function() {
     if (e.keyCode == 83) {
       // myGame.pointer.shoot();
       myGame.counter.addPoints();
-      myGame.ghost.diedGhost();
-
+      if(myGame.ghost.diedGhost()){
+         myGame.newGhost()
+       }
     }
   }
   // audio = new Audio ("./images/Ghostbusters-.mp3")
