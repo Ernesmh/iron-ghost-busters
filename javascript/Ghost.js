@@ -38,7 +38,9 @@ Ghost.prototype.diedGhost = function() {
   myGame.pointer.y <= myGame.ghost.y + myGame.ghost.height)){
   this.img.src = this.pics[1];
   this.number.push("ghost");
-  console.log(this.number)
+  console.log(this.number);
+
+  this.drawAnimation();
 }
 
 }
