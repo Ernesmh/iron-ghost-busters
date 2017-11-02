@@ -22,18 +22,4 @@ Final.prototype.drawEnd = function() {
   ctx.font = "80px Arial";
   ctx.fillText(("0" + myGame.counter.sum).slice(-2), this.x + 1070, this.y + 350)
   ctx.drawImage(this.image, this.x + 75, this.y + 50, 700, 700);
-
-  // ctx.fillStyle = 'rgb(198, 35, 35)';
-  // ctx.fillRect(920, 500, 400, 100);
-  //
-  // ctx.fillStyle = 'rgb(0, 0, 0)';
-  // ctx.strokeRect(920, 500, 400, 100)
-  //
-  // ctx.font = "50px Arial";
-  // ctx.fillStyle = 'rgb(255,255,255';
-  // ctx.fillText("Try again!", this.x + 1005, this.y + 567);
-}
-
-Final.prototype.retry = function(){
-
 }

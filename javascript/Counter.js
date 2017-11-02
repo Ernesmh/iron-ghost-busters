@@ -11,9 +11,6 @@ Counter.prototype.addPoints = function() {
       myGame.pointer.x <= myGame.ghost.x + myGame.ghost.width) &&
     (myGame.pointer.y >= myGame.ghost.y &&
       myGame.pointer.y <= myGame.ghost.y + myGame.ghost.height)) {
-    audiohit = new Audio("./images/touche.mp3")
-    audiohit.play();
-    console.log(myGame.ghost.index);
     if (myGame.ghost.index === 1) {
       this.sum += 3
     } else {

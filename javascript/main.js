@@ -14,22 +14,24 @@ $(document).ready(function() {
     }
     if (e.keyCode == 39) {
       myGame.pointer.moveRight();
-    }
-    if (e.keyCode == 38) {
-      myGame.pointer.moveUp();
-    }
-    if (e.keyCode == 40) {
-      myGame.pointer.moveDown();
-    }
-    if (e.keyCode == 83) {
-      // myGame.pointer.shoot();
-      myGame.counter.addPoints();
-      if(myGame.ghost.diedGhost()){
-         myGame.newGhost()
-       }
-       myGame.laser.showLaser()
-    }
   }
-  // audio = new Audio ("./images/Ghostbusters-.mp3")
-  // audio.play();
+  if (e.keyCode == 38) {
+    myGame.pointer.moveUp();
+  }
+  if (e.keyCode == 40) {
+    myGame.pointer.moveDown();
+  }
+  if (e.keyCode == 83) {
+    // myGame.pointer.shoot();
+    myGame.counter.addPoints();
+    if (myGame.ghost.diedGhost()) {
+      myGame.newGhost()
+    }
+    myGame.laser.showLaser()
+    audio = new Audio("./images/gunsound.mp3")
+    audio.play();
+  }
+  }
+  audio = new Audio("./images/Ghostbusters-.mp3")
+  audio.play();
 });

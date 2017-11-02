@@ -1,4 +1,4 @@
-var a = 60;
+var a = 30;
 
 function Chrono() {
   this.height = 220;
