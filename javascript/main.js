@@ -27,8 +27,9 @@ $(document).ready(function() {
       if(myGame.ghost.diedGhost()){
          myGame.newGhost()
        }
+       myGame.laser.showLaser()
     }
   }
-  audio = new Audio ("./images/Ghostbusters-.mp3")
-  audio.play();
+  // audio = new Audio ("./images/Ghostbusters-.mp3")
+  // audio.play();
 });

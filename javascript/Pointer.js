@@ -29,25 +29,25 @@ Pointer.prototype.drawPointer = function() {
 
 Pointer.prototype.moveLeft = function() {
   if (this.x > 300 && this.x < 1200) {
-    this.x -= 15;
+    this.x -= 20;
   }
 }
 
 Pointer.prototype.moveRight = function() {
   if (this.x > 200 && this.x < 1150) {
-    this.x += 15;
+    this.x += 20;
   }
 }
 
 Pointer.prototype.moveUp = function() {
   if (this.y > 15 && this.y < 425) {
-    this.y -= 15;
+    this.y -= 20;
   }
 }
 
 Pointer.prototype.moveDown = function() {
   if (this.y > 0 && this.y < 400) {
-    this.y += 15;
+    this.y += 20;
   }
 }
 

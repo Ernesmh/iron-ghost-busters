@@ -5,12 +5,14 @@ function Game() {
   this.gun = new Gun()
   this.counter = new Counter();
   this.chrono = new Chrono();
+  this.final = new Final();
+  this.laser = new Laser ();
 }
 
 Game.prototype.startGame = function() {
-  this.interval = setInterval(function() {
+  this.interval = setInterval(() => {
     this.update()
-  }.bind(this), 60);
+  }, 60);
   this.update()
 }
 
@@ -30,8 +32,9 @@ Game.prototype.newGhost = function() {
 }
 
 Game.prototype.finish = function() {
-
-
+  console.log("GAME OVER");
+  clearInterval(this.interval)
+  this.final.drawEnd();
 }
 
 Game.prototype.pause = function() {
