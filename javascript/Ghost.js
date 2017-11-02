@@ -4,11 +4,12 @@ function Ghost() {
   this.x = Math.random() * 800 + 200;
   this.y = Math.random() * 500;
   this.number = ["ghost"];
-  this.pics = ['images/ghost-512.png', 'images/ghostdead.png', 'images/ghostpink.png', 'images/ghostpinkdead.png'];
+  this.pics = ['images/ghost-512.png', 'images/ghostpink.png'];
   this.dx = (Math.random() - 0.5) * 50 + 10
   this.dy = (Math.random() - 0.5) * 50 + 10
   this.img = new Image();
-  this.img.src = this.pics[0];
+  this.index = Math.floor(Math.random()+0.5)
+  this.img.src = this.pics[this.index];
 }
 
 Ghost.prototype.drawAnimation = function() {

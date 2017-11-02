@@ -13,7 +13,12 @@ Counter.prototype.addPoints = function() {
       myGame.pointer.y <= myGame.ghost.y + myGame.ghost.height)) {
     audiohit = new Audio("./images/touche.mp3")
     audiohit.play();
-    this.sum += 1;
+    console.log(myGame.ghost.index);
+    if (myGame.ghost.index === 1) {
+      this.sum += 3
+    } else {
+      this.sum += 1;
+    }
     ("0" + this.sum).slice(-2)
 
     console.log(this.sum)
