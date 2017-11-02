@@ -6,7 +6,7 @@ function Game() {
   this.counter = new Counter();
   this.chrono = new Chrono();
   this.final = new Final();
-  this.laser = new Laser ();
+  this.laser = new Laser();
 }
 
 Game.prototype.startGame = function() {
@@ -23,8 +23,6 @@ Game.prototype.update = function() {
   this.gun.drawGun();
   this.chrono.drawChrono();
   this.counter.drawCounter();
-
-
 }
 
 Game.prototype.newGhost = function() {
@@ -38,13 +36,5 @@ Game.prototype.finish = function() {
 }
 
 Game.prototype.pause = function() {
-
-}
-
-Game.prototype.gameOver = function() {
-
-}
-
-Game.prototype.winner = function() {
 
 }

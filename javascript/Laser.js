@@ -8,5 +8,5 @@ function Laser(){
 Laser.prototype.showLaser = function (){
   var lasimg = new Image();
   lasimg.src = "images/lasertopvert.png"
-      ctx.drawImage(lasimg, myGame.pointer.x - 225, myGame.pointer.y-32, 400, 473  );
+      ctx.drawImage(lasimg, myGame.pointer.x - 225, myGame.pointer.y-32, 400, 473);
 }

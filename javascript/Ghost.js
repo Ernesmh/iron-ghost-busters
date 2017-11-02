@@ -8,13 +8,11 @@ function Ghost() {
   this.dx = (Math.random() - 0.5) * 50 + 10
   this.dy = (Math.random() - 0.5) * 50 + 10
   this.img = new Image();
-  this.index = Math.floor(Math.random()+0.5)
+  this.index = Math.floor(Math.random() + 0.5)
   this.img.src = this.pics[this.index];
 }
 
 Ghost.prototype.drawAnimation = function() {
-
-
   ctx.drawImage(this.img, this.x + this.dx, this.y + this.dy, 150, 150);
 
   if (this.x > 1100 || this.x < 200) {

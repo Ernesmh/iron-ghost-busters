@@ -9,7 +9,7 @@ function Chrono() {
 }
 
 Chrono.prototype.startChrono = function() {
-  var counter = 60;
+  var counter = 2;
   var timer = function() {
     console.log(counter);
     a = ("0" + counter).slice(-2);
