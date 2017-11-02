@@ -30,3 +30,23 @@ canvas{
   margin: auto;
   display: block;
 }
+
+.div{
+  box-sizing: border-box;
+  position:absolute;
+  top:600px;
+  left: 1120px;
+  height: 100px;
+  width: 400px;
+  background-color: rgb(198, 35, 35);
+  color:white;
+  font-family: Arial;
+  padding-top:20px;
+  padding-left: 80px;
+  font-size:50px;
+  cursor: pointer;
+}
+
+.hidden{
+  visibility: hidden;
+}
