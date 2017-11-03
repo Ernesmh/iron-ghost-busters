@@ -32,6 +32,6 @@ $(document).ready(function() {
     audio.play();
   }
   }
-  audio = new Audio("./images/Ghostbusters-.mp3")
+  audio = new Audio("./images/mgs.mp3")
   audio.play();
 });

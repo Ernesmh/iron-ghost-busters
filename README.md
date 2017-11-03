@@ -8,7 +8,7 @@ In addition to those two files, every different object has been created on a sep
 
 You can find the project by accesing to my GitHub remote repo:
 
-https://github.com/Ernesmh/iron-ghost-busters-game
+https://ernesmh.github.io/iron-ghost-busters/index.html
 
 Have fun! 
 

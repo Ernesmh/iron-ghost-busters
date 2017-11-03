@@ -23,6 +23,7 @@ Pointer.prototype.drawPointer = function() {
   ctx.lineTo(this.x + 30, this.y);
   ctx.strokeStyle = "red";
   ctx.stroke();
+
 }
 
 
