@@ -12,7 +12,7 @@ Final.prototype.drawEnd = function() {
   $('canvas').css('background-image', 'url("images/fondo.jpg")')
   $('div').removeClass( "hidden" )
   $( "div" ).click(function() {
-    window.location = "index.html"
+    window.location = "index2.html"
 });
 
   ctx.font = "50px Arial";
