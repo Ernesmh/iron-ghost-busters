@@ -4,7 +4,7 @@ function Final() {
   this.x = 0;
   this.y = 0;
   this.image = new Image();
-  this.image.src = "images/giphy.gif";
+  // this.image.src = "images/giphy.gif";
 }
 
 Final.prototype.drawEnd = function() {
@@ -14,7 +14,7 @@ Final.prototype.drawEnd = function() {
   $( "div" ).click(function() {
     window.location = "index2.html"
 });
-
+  $('div2').removeClass( "hidden" )
   ctx.font = "50px Arial";
   ctx.fillStyle = 'rgb(255,255,255';
   ctx.fillText("YOUR FINAL SCORE IS ", this.x + 850, this.y + 250)
