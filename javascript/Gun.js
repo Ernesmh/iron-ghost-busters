@@ -8,8 +8,8 @@ function Gun(){
 var gunimg = new Image();
 
 Gun.prototype.drawGun = function(){
-  gunimg.onload = function() {
-    ctx.drawImage(gunimg, myGame.pointer.x - 180, myGame.pointer.y + 340, 400, 600  );
-  };
   gunimg.src = "images/gun.png";
+    ctx.drawImage(gunimg, myGame.pointer.x - 180, myGame.pointer.y + 340, 400, 600  );
+
+
 }
